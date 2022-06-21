@@ -1,0 +1,108 @@
+/* These are snippets of code from my very first game: Sanitazer. This was my first team project at DigiPen Institute of Technology. 
+Published 2020. 
+Team size: 3 (all programmers)
+Engine: C_Processing (educational tool)
+High concept: 2D stationary shooter where you must shoot as many of the infected as possible before they reach you!
+Copyright © 2020 DigiPen Institute of Technology, All rights reserved.
+*/
+
+//Spawns enemy on screen
+void AddEnemy(CP_Vector pos_, CP_Vector vel_)
+{
+	Enemy add_;
+	add_.pos = pos_;
+	add_.vel = vel_;
+	for (i = 0; i < enemyTotal; i++)
+	{
+		if (!enemyList[i].on)
+		{
+			enemyList[i] = add_;
+			enemyList[i].on = TRUE;
+			enemyCount++;
+			return;
+		}
+	}
+}
+
+//make enemy move across the screen
+void UpdateEnemy(Enemy* enemy_)
+{
+	enemy_->pos = CP_Vector_Add(enemy_->pos, CP_Vector_Scale(enemy_->vel, dt));
+}
+
+//if enemy touches you, you lose a life
+void CheckForDestroy(Enemy* enemy_)
+{
+	CP_BOOL subtract = FALSE;
+	if (enemy_->vel.x > 0.0f)
+	{
+		if (enemy_->pos.x > CP_System_GetWindowWidth())
+			subtract = TRUE;
+	}
+	else if (enemy_->pos.x < 0.0f)
+		subtract = TRUE;
+	if (CP_Math_Distance(player_x, player_y, enemy_->pos.x, enemy_->pos.y) <= 20.0f)
+	{
+		subtract = TRUE;
+		lives--;
+	}
+	if (subtract)
+	{
+		enemy_->on = FALSE;
+		enemyCount--;
+	}
+}
+
+//Draw enemy
+void DrawEnemy(Enemy enemy_)
+{
+	CP_Settings_Fill(CP_Color_Create(200, 150, 175, 255));
+	CP_Graphics_DrawRect(enemy_.pos.x, enemy_.pos.y, 20.0f, 20.0f);
+}
+
+//Shoot sanitazer at enemy
+void draw_laserbeam(Enemy* enemy_) {
+	//find vector to enemy through point subtraction(enemy - player)
+	CP_Vector line = { enemy_->pos.x - player_x, enemy_->pos.y - player_y };
+
+	//create a normalized vector from it using CP_Vector_Normalize
+	line = CP_Vector_Normalize(line);
+
+	//draw line from player position to player position + multiplied vector
+	if (CP_Input_KeyTriggered(KEY_SPACE)) {
+		laser_timer = 1.0f;
+	}
+	//multiply normalized vector by line length
+	//line_length = CP_Vector_Length(line);
+	float line_length = (screen_width * 0.5f) * (1.0f - (laser_timer));
+	float distance = CP_Math_Distance(player_x, player_y, enemy_->pos.x, enemy_->pos.y) - 10.0f;
+	if (line_length > distance)
+	{
+		line_length = distance;
+		if (laser_timer > 0.0f)
+		{
+			enemy_->on = FALSE;
+			enemyCount--;
+			score++;
+		}
+	}
+	line = CP_Vector_Scale(line, line_length);
+
+	//shoot Sanitazer
+	if (laser_timer > 0) {
+		CP_Settings_StrokeWeight(5.0f);
+		CP_Settings_Stroke(CP_Color_Create(0, 200, 0, 255));
+		CP_Graphics_DrawLine((player_x), player_y, (player_x + (line.x)), (player_y + line.y));
+	}
+	if (!enemy_->on)
+		laser_timer = 0.0f;
+	laser_timer -= dt* 3.0f;
+	if (laser_timer <= 0.0f) {
+		laser_timer = 0.0f;
+	}
+
+	//check enemy position
+	if ((check_collision(line.x + player_x, line.y + player_y) > -1)) {
+		laser_timer = 0.0f;
+	}
+}

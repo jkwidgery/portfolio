@@ -1,4 +1,4 @@
-# portfolio
+# Jasmine Widgery's Developer Portfolio
 This is the repo for my personal website!
 
 Each branch is a separate project I've worked on. Please feel free to look around!

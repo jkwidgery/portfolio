@@ -1,4 +1,4 @@
-Untitled Square Game was my second-semester game project at DigiPen Institute of Technology. 
+Untitled Square Game was my second-semester game project at DigiPen Institute of Technology.
 Link to play: https://games.digipen.edu/games/untitled-square-game 
 Copyright DigiPen Institute of Technology 2021
 Team size: 5

@@ -8,4 +8,6 @@ Team size: 13 (7 developers, 2 game designers, 3 artists, 1 sound designer)
 My Role:
 Design and implement a clean, intuitive designer pipeline by building the engine editor using ImGUI and RTTR libraries
 
+Copyright © 2020 DigiPen Institute of Technology, All rights reserved.
+
 Link to play: https://games.digipen.edu/games/return-to-the-skyway

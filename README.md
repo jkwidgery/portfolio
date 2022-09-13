@@ -7,3 +7,4 @@ If you're interested in my code, have questions, or just want to connect, feel f
 
 Email: jkwidgery@gmail.com
 LinkedIn: https://www.linkedin.com/in/jwidgery
+Website: https://jwidgery02.wixsite.com/jasminewidgery

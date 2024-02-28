@@ -1,7 +1,7 @@
 # Jasmine Widgery's Developer Portfolio
 This repo is my personal portfolio.
 
-Each branch is a separate project I've worked on. Please feel free to look around!
+Each branch (except main) is a separate project, or series of projects, I've worked on. Please feel free to look around!
 
 If you're interested in my code, have questions, or just want to connect, feel free to reach out!
 

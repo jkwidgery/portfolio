@@ -1,10 +1,8 @@
-# Jasmine Widgery's Developer Portfolio
-This repo is my personal portfolio.
+The files contained within this branch showcase my work in Python. Some of these files are dependent on input that I have chosen not to upload here-- if you would like to run these programs, please contact me for the data!
 
-Each branch is a separate project I've worked on. Please feel free to look around!
-
-If you're interested in my code, have questions, or just want to connect, feel free to reach out!
-
-Email: jkwidgery@gmail.com
-LinkedIn: https://www.linkedin.com/in/jwidgery
-Website: https://jwidgery02.wixsite.com/jasminewidgery
+The code here includes but is not limited to:
+Exploratoring Python and Data Analysis
+A spam filter built on the Naive Baye's algorithm which trains on input data, then can accurately identify if an email is spam or not.
+Applications of Linear and Logistic Regression
+A visualization of the k-means clustering algorithm that recolors input photos
+A neural network that can identify handwritten digits (cowritten with Braedan Nevers)

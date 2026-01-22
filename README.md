@@ -4,12 +4,12 @@ Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-912
 Software Engineer
 -----------------
 
-I'm an early career developer with a passion for writing robust, extendable code, especially in support of making awesome video games! I'm currently the Engineering Lead on an indie game project built in Unreal Engine 5 (we're using Diversion instead of git-- you won't see that here!)
+I'm a software engineer with a passion for writing robust, extendable code, especially in support of making awesome video games! I'm currently the Engineering Lead on an indie game project built in Unreal Engine 5 (we're using Diversion instead of git-- you won't see that here!)
 
 * 🌍  I'm based in Greater Seattle Area
 * 🖥️  See my portfolio at [Jasmine's Site](http://jwidgery02.wixsite.com/jasminewidgery)
 * ✉️  You can contact me at [jwidgery02@gmail.com](mailto:jwidgery02@gmail.com)
-* 🚀  I'm currently working on [Project Swagger (Scroll down!)](http://jwidgery02.wixsite.com/jasminewidgery/s-projects-side-by-side)
+* 🚀  I'm currently working on [Rivals of Aether II at Aether Studios](http://jwidgery02.wixsite.com/jasminewidgery/s-projects-side-by-side)
 * 🧠  I'm learning Unreal Engine 5
 * 🤝  I'm open to collaborating on anything! I'm always excited to meet new people and learn new things. Feel free to reach out!
 * ⚡  Continuous development and growth is the most important thing to me as an engineer. I'm always looking for resources to assist in honing my skills.
